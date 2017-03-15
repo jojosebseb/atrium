@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="">
+    <title>WEB TITLE</title>
+
+    <!-- cloud css start -->
+    <link rel="stylesheet" type="text/css" href="http://css.static.sldclc.com/jquery-ui-1.12.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://css.static.sldclc.com/slick-1.6.0.css" />
+    <!-- cloud css end-->
+
+    <!-- local css start -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1050px)" href="styles/main_desktop.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1049px)" href="styles/main_mobile.min.css" />
+    <!-- local css end -->
+</head>
+<body>
+    <div id="navbar">
+        <div class="logo-container">
+            <a href="index.html"></a>
+        </div>
+        <ul class="nav-ul">
+            <a href="about.html"><li>About</li></a>
+            <a href="project.html"><li>Project</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+        </ul>
+        <div class="mobile-handle">
+            <div class="mobile-lines" id="line1"></div>
+            <div class="mobile-lines" id="line2"></div>
+            <div class="mobile-lines" id="line3"></div>
+        </div>
+    </div>
+
+    <div id="parentContainer">
+        <section class="section" id="Map">
+            <div id="mapContainer">
+
+            </div>
+
+            <div class="map-form">
+                <div class="padding">
+                    <div class="map-title">
+                        Get In Touch With Us
+                    </div>
+                    <div class="caption-header">
+                        Our Address
+                        <div class="caption-desc">
+                            Mandala Utara No. 18 C <br>
+                            Tomang - West Jakarta 11440 Indonesia
+                        </div>
+                    </div>
+                </div>
+                <div class="map-choice black enquiry-handle">
+                    <span>Enquiry Form</span>
+                    <span class="arrow right float-right"></span>
+                </div>
+                <div class="map-choice">
+                    <span>Directions</span>
+                    <span class="arrow right float-right"></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="enquiryPopup" class="">
+        <div class="enquiry-container">
+            <div class="section-title">
+                Enquiry
+            </div>
+            <div class="section-caption">
+                Please fill all fields before proceeding to the next part of the enquiry form.
+            </div>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="full-input">
+                    <span class="floating-span">Your Name</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input">
+                    <span class="floating-span">Your Address</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input">
+                    <span class="floating-span">Your Contact Number</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="full-input">
+                    <span class="floating-span">Your Email Address</span>
+                </div>
+                <div class="captcha">
+                    captcha
+                </div>
+
+                <input type="submit" value="Submit"  class="enquiry-btn">
+            </form>
+        </div>
+        <div class="enquiry-tint enquiry-handle"></div>
+
+    </div>
+
+    <div id="footer">
+        <div class="footer-float">
+            <div class="left">
+                @ 2017 Atrium Bangun Perkasa
+            </div>
+            <div class="right">
+                Contractor & Architectural Design
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+    <!-- cloud js start -->
+    <script type="text/javascript" src="http://js.static.sldclc.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/angular.1.6.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://js.static.sldclc.com/slick-1.6.0.min.js"></script>
+    <!-- cloud js end   -->
+
+    <!-- local js start -->
+    <script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="script/jquery.js"></script>
+    <script type="text/javascript" src="script/angular.js"></script>
+    <!-- local js end   -->
+
+<script>
+    function initMap() {
+        var uluru = {lat: -6.172252, lng: 106.797955};
+        var icon = 'http://img.static.sldclc.com/map-marker.png';
+        var map = new google.maps.Map(document.getElementById('mapContainer'), {
+            zoom: 18,
+            center: uluru,
+            styles: [{"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#e9e9e9"},{"lightness": 17}]},{"featureType": "landscape", "elementType": "geometry", "stylers": [{"color": "#f5f5f5"},{"lightness": 20}]},{"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"},{"lightness": 17}]},{"featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{"color": "#ffffff"},{"lightness": 29},{"weight": 0.2}]},{"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"color": "#ffffff"},{"lightness": 18}]},{"featureType": "road.local", "elementType": "geometry", "stylers": [{"color": "#ffffff"},{"lightness": 16}]},{"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#f5f5f5"},{"lightness": 21}]},{"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#dedede"},{"lightness": 21}]},{"elementType": "labels.text.stroke", "stylers": [{"visibility": "on"},{"color": "#ffffff"},{"lightness": 16}]},{"elementType": "labels.text.fill", "stylers": [{"saturation": 36},{"color": "#333333"},{"lightness": 40}]},{"elementType": "labels.icon", "stylers": [{"visibility": "off"}]},{"featureType": "transit", "elementType": "geometry", "stylers": [{"color": "#f2f2f2"},{"lightness": 19}]},{"featureType": "administrative", "elementType": "geometry.fill", "stylers": [{"color": "#fefefe"},{"lightness": 20}]},{"featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{"color": "#fefefe"},{"lightness": 17},{"weight": 1.2}]}]
+
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: icon
+        });
+
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSEciAC0TGvDspAUAnAN8HDX4bu2yElMw&callback=initMap"></script>
+</html>
