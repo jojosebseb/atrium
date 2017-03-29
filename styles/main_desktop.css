@@ -50,7 +50,7 @@ body {
   width: 100px;
   background: black;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 50px;
   padding: 20px 15px;
 }
@@ -61,19 +61,20 @@ body {
 
 #navbar .nav-ul {
   float: right;
-  color: #aaa;
+  color: #000;
   padding: 20px 0;
 }
 
 #navbar .nav-ul li {
   display: inline-block;
   margin-left: 40px;
-  padding: 10px 0px 10px 10px;
-  border-left: 2px solid transparent;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 2px solid transparent;
+  color: #333;
 }
 
 #navbar .nav-ul li:hover {
-  border-left: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 #navbar.alternative {
@@ -241,7 +242,7 @@ body {
 }
 
 #loaderParent .spinner .spinner {
-  animation: spinner 3s infinite forwards linear;
+  animation: spinner 6s infinite forwards linear;
 }
 
 @keyframes spinner {
@@ -263,6 +264,12 @@ body {
   font-family: Monda;
   height: 100vh;
   overflow: hidden;
+}
+
+#homeSlider .slide-items {
+  position: relative;
+  background: black;
+  height: 100vh;
 }
 
 #homeSlider .hero-bg {
@@ -296,6 +303,14 @@ body {
   font-family: Monda;
   text-align: center;
   padding-bottom: 80px;
+}
+
+#Gallery .absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 #Gallery .section-title {

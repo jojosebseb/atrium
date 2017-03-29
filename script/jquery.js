@@ -69,6 +69,35 @@ $('.project-detail-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: true,
+      dots: false
+    }
+  },
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 1,
+
+      slidesToScroll: 1,
+      dots: false,
+    }
+  }
+]
+})
+
+$('.slider-container').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    responsive: [
+  {
+    breakpoint: 1025,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
       dots: true
     }
   },

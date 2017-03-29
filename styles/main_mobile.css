@@ -129,7 +129,7 @@ body {
 
 #navbar .nav-ul.active {
   left: 0;
-  box-shadow: 100px 0px 10px 300px rgba(50, 50, 50, 0.8);
+  box-shadow: 100px 0px 10px 100vw rgba(50, 50, 50, 0.8);
 }
 
 #navbar .nav-ul.active li {
@@ -140,7 +140,7 @@ body {
 #parentContainer {
   left: 0;
   position: relative;
-  padding-top: 70px -2px;
+  padding-top: 70px;
   transition: all .5s ease;
 }
 
@@ -290,6 +290,7 @@ body {
   font-family: Monda;
   height: 100vh;
   overflow: hidden;
+  top: -70px;
 }
 
 #homeSlider .hero-title {
@@ -327,6 +328,13 @@ body {
   transform: translateX(-50%) rotateZ(-45deg);
   border-bottom-left-radius: 5px;
   transition: all .3s ease;
+}
+
+#homeSlider .slide-items {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 #Gallery {
@@ -734,7 +742,7 @@ body {
 .project-detail-slider .slider-item {
   margin: 0 1px;
   max-width: 300px;
-  width: 130px;
+  width: 80vw;
   position: relative;
   cursor: pointer;
 }
